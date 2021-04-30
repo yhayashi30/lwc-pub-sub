@@ -1,0 +1,25 @@
+<template>
+    <lightning-layout>
+        <lightning-layout-item padding="around-small" size="6">
+            <c-custom-event-publisher onselected={handleContactSelect}></c-custom-event-publisher>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-small" size="6">
+            <lightning-card  title="Custom Event Subscriber">
+                <div class="slds-m-around_medium">
+                    <p>{Name}</p>
+                    <p>{Title}</p>
+                    <p>
+                        <lightning-formatted-phone
+                            value={Phone}
+                        ></lightning-formatted-phone>
+                    </p>
+                    <p>
+                        <lightning-formatted-email
+                            value={Email}
+                        ></lightning-formatted-email>
+                    </p>
+                </div>
+            </lightning-card>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

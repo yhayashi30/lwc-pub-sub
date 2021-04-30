@@ -1,0 +1,21 @@
+<template>
+    <lightning-card  title="Custome Event Publisher">
+        <div class="slds-m-around_medium">
+            <template if:true={contacts.data}>
+                <template for:each={contacts.data} for:item="contact">
+                    <a href="#"
+                        key={contact.Id}
+                        onclick={handleContactClick}
+                        data-value={contact.Id}
+                    >
+                        <lightning-layout vertical-align="center">
+                            <lightning-layout-item padding="around-small">
+                                <p>{contact.Name}</p>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                    </a>
+                </template>
+            </template>
+        </div>
+        </lightning-card>
+</template>
